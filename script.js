@@ -167,9 +167,9 @@ document.getElementById("num-children").addEventListener("change", function () {
             <label for="last-name-${i}">Voornaam:</label>
             <input type="text" id="last-name-${i}" class="child-last-name" required>
 
-            <label>Schooljaar:</label>
+            <label>Leerjaar:</label>
             <select id="child-year-${i}" class="child-year" required>
-                <option value="" disabled selected>Selecteer een schooljaar</option>
+                <option value="" disabled selected>Selecteer een leerjaar</option>
                 ${schoolData.map(data => `<option value="${data.year}">${data.year}</option>`).join("")}
             </select>
 
