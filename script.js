@@ -1,7 +1,8 @@
 const registeredChildren = [
-    { id: 1, nom: "Dupont", prenom: "Jean", annee: "1ste jaar", section: "Algemeen", option: "Wiskunde" },
-    { id: 2, nom: "Durand", prenom: "Marie", annee: "2de jaar", section: "Overgang", option: "Grafisch ontwerp" }
+    { id: 1, nom: "Jean", prenom: "Dupont", annee: "1ste jaar", section: "Generaal", option: "META MENS - TALEN" },
+    { id: 2, nom: "Marie", prenom: "Durand", annee: "2de jaar", section: "Doorstroom (ASO)", option: "ECO keuze Duits extra" }
 ];
+
 
 const schoolData = [
     {
@@ -112,6 +113,42 @@ function populateOptions(container, options, selectedOption) {
         </select>
     `;
 }
+// Mise à jour de registeredChildren avec des enfants existants
+
+// Fonction pour remplir le formulaire avec les données d'un enfant
+function fillChildForm(childData, childForm, index) {
+    // Remplir les champs de base
+    childForm.querySelector(`#first-name-${index}`).value = childData.nom;
+    childForm.querySelector(`#last-name-${index}`).value = childData.prenom;
+
+    // Sélectionner l'année
+    const yearSelect = childForm.querySelector(`#child-year-${index}`);
+    yearSelect.value = childData.annee;
+
+    // Remplir les sections et options basées sur l'année
+    const yearData = schoolData.find(data => data.year === childData.annee);
+    const sectionSelect = childForm.querySelector(`#child-section-${index}`);
+    const optionsContainer = childForm.querySelector(".options-container");
+
+    if (yearData) {
+        if (yearData.sections) {
+            sectionSelect.innerHTML = `
+                <option value="" disabled>Selecteer een studierichting</option>
+                ${yearData.sections.map(sec => `<option value="${sec.name}" ${sec.name === childData.section ? "selected" : ""}>${sec.name}</option>`).join("")}
+            `;
+            const sectionData = yearData.sections.find(sec => sec.name === childData.section);
+            if (sectionData) {
+                populateOptions(optionsContainer, sectionData.options, childData.option);
+            }
+        } else {
+            populateOptions(optionsContainer, yearData.options, childData.option);
+        }
+    }
+
+    // Mettre à jour les frais
+    const feesContainer = childForm.querySelector(".fees-container");
+    updateFees(childData.annee, childData.section, childData.option, feesContainer);
+}
 
 // Main Form Handler
 document.getElementById("num-children").addEventListener("change", function () {
@@ -154,6 +191,23 @@ document.getElementById("num-children").addEventListener("change", function () {
         const sectionSelect = sectionContainer.querySelector("select");
         const optionsContainer = childForm.querySelector(".options-container");
         const feesContainer = childForm.querySelector(".fees-container");
+
+        // Sélectionner un enfant enregistré
+        const childSelect = document.createElement("select");
+        childSelect.innerHTML = `
+            <option value="" disabled selected>Selecteer een kind</option>
+            ${registeredChildren.map(child => `<option value="${child.id}">${child.nom} ${child.prenom}</option>`).join("")}
+        `;
+        childForm.prepend(childSelect);
+
+        childSelect.addEventListener("change", function () {
+            const selectedChildId = parseInt(this.value);
+            const selectedChild = registeredChildren.find(child => child.id === selectedChildId);
+
+            if (selectedChild) {
+                fillChildForm(selectedChild, childForm, i);
+            }
+        });
 
         yearSelect.addEventListener("change", function () {
             const selectedYear = this.value;
