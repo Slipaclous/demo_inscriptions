@@ -272,7 +272,7 @@ input:focus,
 
 /* Language Dropdown */
 .language-dropdown {
-  display: flex;
+  display: none;
   align-items: center;
   color: white;
   font-weight: 600;
@@ -364,7 +364,7 @@ input:focus,
   left: 85%;
   margin-left: 2rem;
   cursor: pointer;
-  display: flex;
+  display: hidden;
   align-items: center;
   color: white;
   font-weight: 600;
@@ -624,7 +624,7 @@ input:focus,
   transform: translate(-50%, -50%);
   margin-left: 0;
   cursor: pointer;
-  display: flex;
+  display: hidden;
   align-items: center;
   color: white;
   font-weight: 600;
