@@ -1,6 +1,6 @@
 const registeredChildren = [
-    { id: 1, nom: "Jean", prenom: "Dupont", annee: "1ste jaar", section: "Generaal", option: "META MENS - TALEN" },
-    { id: 2, nom: "Marie", prenom: "Durand", annee: "2de jaar", section: "Doorstroom (ASO)", option: "ECO keuze Duits extra" }
+    { id: 1, nom: "Jan", prenom: "Peters", annee: "1ste jaar", section: "Generaal", option: "META MENS - TALEN" },
+    { id: 2, nom: "Ann", prenom: "Koek", annee: "2de jaar", section: "Doorstroom (ASO)", option: "ECO keuze Duits extra" }
 ];
 
 
