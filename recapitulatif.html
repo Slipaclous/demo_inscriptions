@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestelling Samenvatting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header-glo">
+        <div class="header-top">
+            <a href="#"><img class="img-logo" src="images/rentabook_150.png" alt="Logo"></a>
+            <div class="language-dropdown">
+                <span class="current-language">Frans</span>
+                <span class="arrow">&#9660;</span>
+                <ul class="language-options">
+                    <li><a href="#">Frans</a></li>
+                    <li><a href="#">Nederlands</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+
+            <nav class="nav">
+                <button class="burger-menu" aria-label="Toggle navigation">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#">Ontvangst</a></li>
+                    <li><a href="#">Huur of Aankoop?</a></li>
+                    <li><a href="#">Vragen/Antwoorden</a></li>
+                    <li><a href="#">Levering</a></li>
+                    <li><a href="#">Retourneren</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-step complete" data-step="1">Samenvatting</div>
+                <div class="progress-step complete" data-step="2">Inloggen</div>
+                <div class="progress-step complete" data-step="3">Adres</div>
+                <div class="progress-step complete" data-step="4">Levering</div>
+                <div class="progress-step current" data-step="5">Aanvullende info</div>
+                <div class="progress-step" data-step="6">Betaling</div>
+            </div>
+        </div>
+
+        <div id="order-summary-container">
+            <h2>Bestelling Samenvatting</h2>
+
+            <div id="children-summary">
+                <!-- De informatie over de kinderen zal hier worden ingevoegd -->
+            </div>
+
+            <div id="total-fees">
+                <h2></h2>
+                <p><strong>Totaal Verplichte kosten:</strong> <span id="total-fees-amount">0€</span></p>
+            </div>
+            <div class="buttons-div">
+
+                <div class="buttons-left">
+                    <button class="custom-button" id="edit-order">Wijzig bestelling</button>
+                </div>
+
+                <div class="buttons-right">
+                    <button class="custom-button" id="confirm-order">Bevestig bestelling</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="images/rentabook_150.png" alt="Logo">
+            </div>
+            <div class="footer-nav">
+                <div class="footer-section">
+                    <h3>Mijn account</h3>
+                    <ul>
+                        <li><a href="">Mijn bestellingen</a></li>
+                        <li><a href="">Mijn creditnota's</a></li>
+                        <li><a href="">Mijn adressen</a></li>
+                        <li><a href="">Mijn gegevens</a></li>
+                        <li><a href="">Mijn waardebonnen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Neem contact met ons op</h3>
+                    <ul>
+                        <li><a href=""><i class="fas fa-map-marker-alt"></i> RENT A BOOK, Ilya Prigoginestraat, 1 7850
+                                Edingen</a></li>
+                        <li><a href=""><i class="fas fa-phone-alt"></i> 02 397 98 99</a></li>
+                        <li><a href=""><i class="fas fa-envelope"></i> E-mail: info@rentabook.be</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="https://www.ask-it.pro">E-commerce by Ask-it</a>
+            <p>&copy; 2024 Rent-a-Book.</p>
+            <a href="#">Algemene voorwaarden</a>
+            <a href="#">Privacy- en cookiebeleid</a>
+        </div>
+    </footer>
+
+    <script src="recapitulatif.js"></script>
+</body>
+
+</html>

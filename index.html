@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
+    <title>Document</title>
+</head>
+<body>
+
+  <header id="header-glo">
+    <div class="header-top">
+      <a href="#"><img class="img-logo" src="images/rentabook_150.png" alt="Logo"></a>
+      <div class="language-dropdown">
+        <span class="current-language">Nederlands</span>
+        <span class="arrow">&#9660;</span>
+        <ul class="language-options">
+          <li><a href="#">Frans</a></li>
+          <li><a href="#">Nederlands</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom">
+
+      <nav class="nav">
+        <button class="burger-menu" aria-label="Toggle navigation">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Huren of kopen?</a></li>
+          <li><a href="#">Vragen/Antwoorden</a></li>
+          <li><a href="#">Levering</a></li>
+          <li><a href="#">Retour</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        
+      </nav>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-step complete" data-step="1">Samenvatting</div>
+        <div class="progress-step complete" data-step="2">Aanmelden</div>
+        <div class="progress-step complete" data-step="3">Adres</div>
+        <div class="progress-step complete" data-step="4">Levering</div>
+        <div class="progress-step current" data-step="5">Extra info</div>
+        <div class="progress-step" data-step="6">Betaling</div>
+      </div>
+    </div>
+    <div class="wrapper-inside">
+
+      <form id="children-form" class="form-container">
+          <h2>Praktische informatie voor de school</h2>
+          
+          <label for="num-children">Hoeveel kinderen worden door deze bestelling gedekt op deze school?</label>
+          <select id="num-children" name="num_children" class="form-select">
+            <option value="" disabled selected>Selecteer</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        
+          <div id="children-forms-container" class="children-forms-container"></div>
+        
+          <button type="submit" class="hidden form-button">Verzenden</button>
+        </form>
+        <div class="buttons-div">
+          <div class="buttons-left">
+            <button class="custom-button">Extra knop</button>
+            <button class="custom-button">
+              <i class="fas fa-arrow-left"></i> Doorgaan met winkelen
+            </button>
+          </div>
+          <div class="buttons-right">
+            <button id="submit-form" class="custom-button-right">
+              Bestellen
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="images/rentabook_150.png" alt="Logo">
+      </div>
+      <div class="footer-nav">
+        <div class="footer-section">
+          <h3>Mijn account</h3>
+          <ul>
+            <li><a href="">Mijn bestellingen - Mijn facturen</a></li>
+            <li><a href="">Mijn kredietnota's</a></li>
+            <li><a href="">Mijn adressen</a></li>
+            <li><a href="">Mijn persoonlijke informatie</a></li>
+            <li><a href="">Mijn kortingsbonnen</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacteer ons</h3>
+          <ul>
+            <li><a href=""><i class="fas fa-map-marker-alt"></i> RENT A BOOK, Rue Ilya Prigogine, 1 - 7850 Edingen</a></li>
+            <li><a href=""><i class="fas fa-phone-alt"></i> Bel ons op: 02 397 98 90</a></li>
+            <li><a href=""><i class="fas fa-envelope"></i> E-mail: info@rentabook.be</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="https://www.ask-it.pro">E-commerce by Ask-it</a>
+      <p>&copy; 2024 Rent-a-Book.</p>
+      <a href="#">Algemene voorwaarden</a>
+      <a href="#">Privacybescherming GDPR</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
