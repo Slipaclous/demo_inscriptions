@@ -40,41 +40,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Gérer le bouton "Modifier la commande"
     document.getElementById("edit-order").addEventListener("click", function () {
-        console.log("Bouton 'Modifier la commande' cliqué");
-        const localStorageData = [];
+    console.log("Bouton 'Wijzig bestelling' cliqué");
 
-        // Sauvegarder les données dans le localStorage
-        for (let i = 1; i <= numChildren; i++) {
-            const name = urlParams.get(`child_${i}_name`) || "";
-            const firstname = urlParams.get(`child_${i}_firstname`) || "";
-            const year = urlParams.get(`child_${i}_year`) || "";
-            const section = urlParams.get(`child_${i}_section`) || "";
-            const option = urlParams.get(`child_${i}_option`) || "";
-            const fees = urlParams.get(`child_${i}_fees`) || "";
-            const description = urlParams.get(`child_${i}_description`) || "";
+    // Préparer un tableau pour stocker les données des enfants
+    const localStorageData = [];
 
-            // Stocker les données enfant par enfant dans un tableau pour localStorage
-            localStorageData.push({
-                name,
-                firstname,
-                year,
-                section,
-                option,
-                fees,
-                description,
-            });
+    // Parcourir les données des enfants transmises
+    for (let i = 1; i <= numChildren; i++) {
+        const name = urlParams.get(`child_${i}_name`) || "";
+        const firstname = urlParams.get(`child_${i}_firstname`) || "";
+        const year = urlParams.get(`child_${i}_year`) || "";
+        const section = urlParams.get(`child_${i}_section`) || "";
+        const option = urlParams.get(`child_${i}_option`) || "";
+        const fees = urlParams.get(`child_${i}_fees`) || "";
+        const description = urlParams.get(`child_${i}_description`) || "";
 
-            console.log(
-                `Sauvegarde de l'enfant ${i} - Nom: ${name}, Prénom: ${firstname}`
-            );
-        }
+        // Stocker les données enfant par enfant
+        localStorageData.push({
+            name,
+            firstname,
+            year,
+            section,
+            option,
+            fees,
+            description,
+        });
 
-        // Sauvegarder dans le localStorage
-        localStorage.setItem("childrenData", JSON.stringify(localStorageData));
+        console.log(`Enfant ${i} sauvegardé - Nom: ${name}, Prénom: ${firstname}`);
+    }
 
-        console.log("Redirection vers la page précédente");
-        window.history.back(); // Revenir à la page précédente
-    });
+    // Sauvegarder les données dans le localStorage
+    localStorage.setItem("childrenData", JSON.stringify(localStorageData));
+
+    // Retourner au formulaire
+    window.history.back();
+});
+
 
     // Gestion du bouton "Confirmer la commande"
     document.getElementById("confirm-order").addEventListener("click", function () {

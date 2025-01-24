@@ -190,7 +190,7 @@ document.getElementById("num-children").addEventListener("change", function () {
         const sectionContainer = childForm.querySelector(".section-container");
         const sectionSelect = sectionContainer.querySelector("select");
         const optionsContainer = childForm.querySelector(".options-container");
-        const feesContainer = childForm.querySelector(".fees-container");
+        const feesContainer = childForm.querySelector(".fees-Acontainer");
 
         // Sélectionner un enfant enregistré
         const childSelect = document.createElement("select");
@@ -320,3 +320,45 @@ document.getElementById('submit-form').addEventListener('click', function (event
         window.location.href = `recapitulatif.html?${urlParams.toString()}`;
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Chargement du formulaire...");
+
+    // Récupérer les données depuis le localStorage
+    const savedData = localStorage.getItem("childrenData");
+    console.log("Contenu brut du localStorage:", savedData);
+    
+    if (savedData) {
+        try {
+            const childrenData = JSON.parse(savedData);
+            console.log("Données parsées:", childrenData);
+            
+            childrenData.forEach((child, index) => {
+                console.log(`Données pour l'enfant ${index + 1}:`, child);
+                const childIndex = index + 1;
+    
+                // Code pour remplir les champs du formulaire
+                document.querySelector(`#child_${childIndex}_name`).value = child.name || "";
+                document.querySelector(`#child_${childIndex}_firstname`).value = child.firstname || "";
+                document.querySelector(`#child_${childIndex}_year`).value = child.year || "";
+                document.querySelector(`#child_${childIndex}_section`).value = child.section || "";
+                document.querySelector(`#child_${childIndex}_option`).value = child.option || "";
+                document.querySelector(`#child_${childIndex}_fees`).value = child.fees || "";
+                document.querySelector(`#child_${childIndex}_description`).value = child.description || "";
+            });
+        } catch (error) {
+            console.error("Erreur lors du parsing des données JSON:", error);
+        }
+    } else {
+        console.log("Aucune donnée trouvée dans localStorage.");
+    }
+
+    // Ajouter un bouton de reset pour vider le localStorage si nécessaire
+    const resetButton = document.getElementById("reset-form");
+    if (resetButton) {
+        resetButton.addEventListener("click", function () {
+            localStorage.removeItem("childrenData");
+            console.log("Données du localStorage supprimées !");
+        });
+    }
+});
+
