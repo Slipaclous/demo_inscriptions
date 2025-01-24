@@ -35,6 +35,9 @@ body {
   width: 50%;
   margin: 0 auto;
 }
+.fees-container{
+  display: hidden;
+}
 .form-container {
   width: 100%;
   margin: 50px auto;

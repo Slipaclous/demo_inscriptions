@@ -8,11 +8,19 @@ const schoolData = [
         year: "1ste jaar",
         sections: [
             {
-                name: "Algemeen",
+                name: "Generaal",
                 options: [
-                    { name: "Wiskunde", fees: { amount: 100, description: "Avanced wiskunde om de basis te versterken." } },
-                    { name: "Frans", fees: { amount: 80, description: "Cursus Franse taal en literatuur." } },
-                    { name: "Geschiedenis", fees: { amount: 70, description: "Verkenning van belangrijke wereldgeschiedenis." } }
+                    { name: "META MENS - TALEN", fees: { amount: 100, description: "Boekkosten: 40€, Examens: 30€, Materialen: 30€." } },
+                    { name: "LA LATIJN", fees: { amount: 80, description: "Boekkosten: 30€, Examens: 25€, Materialen: 25€." } },
+                    { name: "LAME LATIJN - MENS", fees: { amount: 70, description: "Boekkosten: 25€, Examens: 20€, Materialen: 25€." } },
+                    { name: "MEWE MENS - WETENSCHAPPEN", fees: { amount: 70, description: "Boekkosten: 28€, Examens: 22€, Materialen: 20€." } },
+                    { name: "LATA LATIJN - TALEN", fees: { amount: 70, description: "Boekkosten: 25€, Examens: 23€, Materialen: 22€." } },
+                    { name: "INWE INGENIEU(r)S ONTWERP - WET", fees: { amount: 70, description: "Boekkosten: 26€, Examens: 21€, Materialen: 23€." } },
+                    { name: "TAON TALEN - ONDERNEMEN", fees: { amount: 70, description: "Boekkosten: 22€, Examens: 24€, Materialen: 24€." } },
+                    { name: "INON INGENIEU(r)S ONTWERP", fees: { amount: 70, description: "Boekkosten: 27€, Examens: 22€, Materialen: 21€." } },
+                    { name: "WETA WETENSCHAPPEN - TALEN", fees: { amount: 70, description: "Boekkosten: 24€, Examens: 21€, Materialen: 25€." } },
+                    { name: "WEON WETENSCHAPPEN - ONDERNEMEN", fees: { amount: 70, description: "Boekkosten: 26€, Examens: 22€, Materialen: 22€." } },
+                    { name: "MEON MENS - ONDERNEMEN", fees: { amount: 70, description: "Boekkosten: 25€, Examens: 23€, Materialen: 22€." } },
                 ]
             }
         ]
@@ -21,27 +29,30 @@ const schoolData = [
         year: "2de jaar",
         sections: [
             {
-                name:"Doorstroom (ASO)",
+                name: "Doorstroom (ASO)",
                 options: [
-                    { name: "ECO keuze Duits extra", fees: { amount: 110, description: "Introductie tot grafisch ontwerp en tools." } },
-                    { name: "ECO keuze wiskunde extra", fees: { amount: 85, description: "Cursus over de fundamenten" +
-                                " van de chemie." } },
-                    { name: "HW (humane wetenschappen)", fees: { amount: 85, description: "Cursus over de" +
-                                " fundamenten van de chemie." } },
-                    { name: "LAT keuze Duits extra", fees: { amount: 85, description: "Cursus over de fundamenten" +
-                                " van de chemie." } },
-                    { name: "LAT keuze wiskunde extra", fees: { amount: 85, description: "Cursus over de fundamenten" +
-                                " van de chemie." } },
-                    { name: "NW (natuurwetenschappen)", fees: { amount: 85, description: "Cursus over de fundamenten" +
-                                " van de chemie." } },
-                ],
-
-                name:"dubbele finaliteit (TSO)",
-                options:[
-                    { name: "B&O (bedrijf en organisatie)", fees: { amount: 110, description: "Introductie tot grafisch ontwerp en tools." } },
-                    { name: "ELME (elektromechanische technieken)", fees: { amount: 110, description: "Introductie tot grafisch ontwerp en tools." } },
-                    { name: "M&W (maatschappij en welzijn)", fees: { amount: 110, description: "Introductie tot grafisch ontwerp en tools." } },
-                    { name: "SPORT", fees: { amount: 110, description: "Introductie tot grafisch ontwerp en tools." } }, ,
+                    { name: "ECO keuze Duits extra", fees: { amount: 110, description: "Boekkosten: 45€, Examens: 40€, Materialen: 25€." } },
+                    { name: "ECO keuze wiskunde extra", fees: { amount: 85, description: "Boekkosten: 35€, Examens: 30€, Materialen: 20€." } },
+                    { name: "HW (humane wetenschappen)", fees: { amount: 85, description: "Boekkosten: 32€, Examens: 29€, Materialen: 24€." } },
+                    { name: "LAT keuze Duits extra", fees: { amount: 85, description: "Boekkosten: 31€, Examens: 28€, Materialen: 26€." } },
+                    { name: "LAT keuze wiskunde extra", fees: { amount: 85, description: "Boekkosten: 30€, Examens: 27€, Materialen: 28€." } },
+                    { name: "NW (natuurwetenschappen)", fees: { amount: 85, description: "Boekkosten: 34€, Examens: 28€, Materialen: 23€." } },
+                ]
+            },
+            {
+                name: "dubbele finaliteit (TSO)",
+                options: [
+                    { name: "B&O (bedrijf en organisatie)", fees: { amount: 110, description: "Boekkosten: 40€, Examens: 35€, Materialen: 35€." } },
+                    { name: "ELME (elektromechanische technieken)", fees: { amount: 110, description: "Boekkosten: 45€, Examens: 35€, Materialen: 30€." } },
+                    { name: "M&W (maatschappij en welzijn)", fees: { amount: 110, description: "Boekkosten: 42€, Examens: 32€, Materialen: 36€." } },
+                    { name: "SPORT", fees: { amount: 110, description: "Boekkosten: 38€, Examens: 32€, Materialen: 40€." } },
+                ]
+            },
+            {
+                name: "arbeidsmarkt (BSO)",
+                options: [
+                    { name: "ELEK (elektriciteit)", fees: { amount: 110, description: "Boekkosten: 43€, Examens: 33€, Materialen: 34€." } },
+                    { name: "O&L (organisatie en logistiek)", fees: { amount: 110, description: "Boekkosten: 45€, Examens: 30€, Materialen: 35€." } },
                 ]
             }
         ]
@@ -49,26 +60,21 @@ const schoolData = [
     {
         year: "3de jaar",
         options: [
-            { name: "BIOWE BIOTECHNOLOGISCHE WET", fees: { amount: 150, description: "Cursus programmeren en softwareontwikkeling." } },
-            { name: "NAWE NATUURWETENSCHAPPEN", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "ECWE ECONOMISCHE WETENSCHAPPEN", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "GRLA GRIEKS - LATIJN", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "LA LATIJN ", fees: { amount: 130, description: "Leer netwerken en computerbeveiliging." } },
-            { name: "HUWE HUMANE WETENSCHAPPEN", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "BEWE BEDRIJFSWETENSCHAPPEN", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "MAWE MAATSCHAPIJ & WELZIJNSWET", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "B&O - Bedrijf en organisatie", fees: { amount: 130, description: "Leer netwerken en" +
-                        " computerbeveiliging." } },
-            { name: "NAWE NATUURWETENSCHAPPEN", fees: { amount: 130, description: "Leer netwerken en computerbeveiliging." } }
+            { name: "BIOWE BIOTECHNOLOGISCHE WET", fees: { amount: 150, description: "Boekkosten: 60€, Examens: 50€, Materialen: 40€." } },
+            { name: "NAWE NATUURWETENSCHAPPEN", fees: { amount: 130, description: "Boekkosten: 50€, Examens: 45€, Materialen: 35€." } },
+            { name: "ECWE ECONOMISCHE WETENSCHAPPEN", fees: { amount: 130, description: "Boekkosten: 48€, Examens: 42€, Materialen: 40€." } },
+            { name: "GRLA GRIEKS - LATIJN", fees: { amount: 130, description: "Boekkosten: 45€, Examens: 40€, Materialen: 45€." } },
+            { name: "LA LATIJN", fees: { amount: 130, description: "Boekkosten: 42€, Examens: 40€, Materialen: 48€." } },
+            { name: "HUWE HUMANE WETENSCHAPPEN", fees: { amount: 130, description: "Boekkosten: 45€, Examens: 35€, Materialen: 50€." } },
+            { name: "BEWE BEDRIJFSWETENSCHAPPEN", fees: { amount: 130, description: "Boekkosten: 42€, Examens: 38€, Materialen: 50€." } },
+            { name: "MAWE MAATSCHAPIJ & WELZIJNSWET", fees: { amount: 130, description: "Boekkosten: 44€, Examens: 36€, Materialen: 50€." } },
+            { name: "B&O - Bedrijf en organisatie", fees: { amount: 130, description: "Boekkosten: 45€, Examens: 35€, Materialen: 50€." } },
+            { name: "NAWE NATUURWETENSCHAPPEN", fees: { amount: 130, description: "Boekkosten: 43€, Examens: 38€, Materialen: 49€." } }
         ]
     }
 ];
+
+
 
 // Update Fees Function
 function updateFees(year, section, option, feesContainer) {
@@ -85,7 +91,6 @@ function updateFees(year, section, option, feesContainer) {
     }
 
     if (feeData) {
-        feesContainer.style.display = "block";
         feesContainer.querySelector("span").textContent = feeData.amount;
         feesContainer.dataset.description = feeData.description;
     } else {
@@ -119,7 +124,7 @@ document.getElementById("num-children").addEventListener("change", function () {
         childForm.classList.add("child-form");
         childForm.innerHTML = `
             <h3>Kind ${i}</h3>
-            <label for="first-name-${i}">Naaam:</label>
+            <label for="first-name-${i}">Naam:</label>
             <input type="text" id="first-name-${i}" class="child-first-name" required>
 
             <label for="last-name-${i}">Voornaam:</label>
