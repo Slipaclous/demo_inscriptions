@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p><strong>Naam:</strong> ${name}</p>
             <p><strong>Voornaam:</strong> ${firstname}</p>
             <p><strong>Schooljaar:</strong> ${year}</p>
-            <p><strong>Studierichting:</strong> ${section}</p>
+            ${section !== "Geen" ? `<p><strong>Studierichting:</strong> ${section}</p>` : ""}
             <p><strong>Optie:</strong> ${option}</p>
             <p><strong>Verplichte kosten:</strong> ${fees.toFixed(2)}€</p>
             <p class="description"><strong>Beschrijving kosten:</strong> ${description}</p>

@@ -26,6 +26,19 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+/* Style général pour tous les sélecteurs d'enfants */
+.child-select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style spécifique pour le sélecteur avec un ID particulier */
+#child-select-1 {
+  background-color: #f9f9f9;
+}
 
 .wrapper {
   width: 80%;

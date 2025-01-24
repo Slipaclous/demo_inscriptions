@@ -194,6 +194,7 @@ document.getElementById("num-children").addEventListener("change", function () {
 
         // Sélectionner un enfant enregistré
         const childSelect = document.createElement("select");
+        childSelect.classList.add("child-select"); // Classe CSS
         childSelect.innerHTML = `
             <option value="" disabled selected>Selecteer een kind</option>
             ${registeredChildren.map(child => `<option value="${child.id}">${child.nom} ${child.prenom}</option>`).join("")}
